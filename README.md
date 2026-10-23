@@ -41,26 +41,19 @@ The project uses CSV datasets organized into two main directories: CRM and ERP.
 ## 🔄 ETL Pipeline
 
 ### 1. Extract
-
-- Import ERP and CRM CSV files into SQL Server.
-- Load source data into raw staging tables.
-- Validate file formats and expected columns.
-- Identify malformed records and missing source files.
+- Load ERP and CRM CSV files into Bronze tables (raw data).
+- Preserve source data as-is for traceability and debugging.
 
 ### 2. Transform
-
-- Standardize dates, text, numeric values, and identifiers.
-- Handle missing values and duplicate records.
-- Resolve inconsistent customer and product references.
-- Apply business rules and validate relationships.
-- Prepare clean datasets for dimensional modeling.
+- Load Bronze data into Silver tables using full load (truncate and insert).
+- Clean, standardize, and normalize data.
+- Create derived columns and enrich data.
+- Load cleaned data into Silver tables for analysis.
 
 ### 3. Load
-
-- Load cleansed data into dimension and fact tables.
-- Generate surrogate keys where appropriate.
-- Enforce primary keys and foreign key relationships.
-- Validate record counts and analytical results.
+- Create Gold views from Silver data.
+- Apply business rules, integrate data, and aggregate results.
+- Organize data into star schemas, flat tables, and aggregated objects for reporting and analytics.
 
 ## 🧹 Data Quality & Validation
 
@@ -68,10 +61,8 @@ The project uses CSV datasets organized into two main directories: CRM and ERP.
 |---|---|
 | Missing values | Apply documented business rules or retain valid nulls |
 | Duplicate records | Identify duplicates and apply deduplication rules |
-| Inconsistent formats | Standardize dates, text, and identifiers |
+| Inconsistent formats | Standardize and Normalize |
 | Invalid data types | Validate and safely convert source values |
-| Unmatched keys | Identify orphaned customer and product references |
-| Invalid business values | Validate quantities, prices, and dates |
 
 All cleansing and transformation rules should be documented to ensure data consistency and traceability.
 
@@ -128,59 +119,6 @@ SQL_Data_Warehouse_Project/
 
 *This is a suggested structure; adjust it to match the files in your repository.*
 
-## ⚙️ Getting Started
-
-### Prerequisites
-
-- Microsoft SQL Server.
-- SQL Server Management Studio (SSMS) or a compatible SQL client.
-- ERP and CRM CSV datasets.
-- Appropriate database permissions.
-
-### Installation
-
-**Step 1: Clone the repository**
-
-```bash
-git clone <repository-url>
-cd SQL_Data_Warehouse_Project
-```
-
-Replace `<repository-url>` with your actual GitHub repository URL.
-
-**Step 2: Prepare the datasets**
-
-Place the ERP and CRM CSV files in their corresponding directories.
-
-**Step 3: Create the database**
-
-Execute the database initialization script in SQL Server.
-
-Alternatively, create the database manually:
-
-```sql
-CREATE DATABASE DataWarehouse;
-GO
-```
-
-**Step 4: Create schemas and tables**
-
-Execute the SQL scripts in the appropriate dependency order.
-
-**Step 5: Run the ETL pipeline**
-
-Import the source data, perform cleansing and transformation, and load the dimensional model.
-
-**Step 6: Validate the data**
-
-Execute validation queries to check duplicates, missing values, key relationships, and sales metrics.
-
-**Step 7: Explore the warehouse**
-
-Use SQL queries, reporting views, or an optional Power BI dashboard to analyze sales performance.
-
-*Execution steps may vary depending on the SQL scripts implemented in the repository.*
-
 ## 📋 Project Scope
 
 This project focuses on a **current-state analytical data warehouse**.
@@ -193,17 +131,6 @@ This project focuses on a **current-state analytical data warehouse**.
 
 **Important:** Historical sales transactions may still be included in the source data. The exclusion of historization means the project does not maintain historical versions of changing dimension attributes.
 
-## 📚 Documentation
-
-The project documentation covers:
-
-- **Architecture:** Data flow, layers, and ETL processes.
-- **Data Model:** Tables, keys, relationships, and fact-table grain.
-- **Data Dictionary:** Column names, data types, descriptions, and business definitions.
-- **Data Quality Rules:** Cleansing logic and validation criteria.
-- **Business Metrics:** Definitions of sales measures and calculations.
-- **Execution Guide:** Setup instructions and pipeline dependencies.
-
 ## ✅ Expected Outcomes
 
 - A centralized SQL Server data warehouse integrating ERP and CRM data.
@@ -213,27 +140,15 @@ The project documentation covers:
 - Documented business rules and data structures.
 - A foundation for SQL analytics and optional BI dashboards.
 
-## 🚧 Future Enhancements
-
-- Automated ETL scheduling and orchestration.
-- Incremental data loading.
-- Historical dimension tracking with SCD Type 2.
-- Automated data quality monitoring and pipeline logging.
-- Indexing and query performance optimization.
-- Power BI dashboards.
-- Database CI/CD workflows.
-
-These enhancements are potential future extensions, not necessarily part of the current implementation.
-
 ## 👤 Author
 
-**Your Name**
+**Badreddine Brahim**
 
-- GitHub: [Your GitHub Profile](https://github.com/)
+- GitHub: [Badreddine Brahim](https://github.com/BrahimBadreddine)
 
 ## 📄 License
 
-Choose an appropriate open-source license for your project and include the corresponding license file in the repository.
+This project is licensed under the MIT License.
 
 ---
 
