@@ -18,7 +18,7 @@ The Gold Layer holds the business-level view of the data, designed for analytics
 | customer_number | NVARCHAR(50) | Alphanumeric identifier for the customer, used for tracking and referencing.                     |
 | first_name      | NVARCHAR(50) | The customer's first name, as recorded in the system.                                            |
 | last_name       | NVARCHAR(50) | The customer's last name or family name.                                                         |
-| country         | NVARCHAR(50) | The customer's country of residence (e.g., 'Australia').                                         |
+| country         | NVARCHAR(50) | The customer's country of residence (e.g., 'Spain').                                         |
 | marital_status  | NVARCHAR(50) | The customer's marital status (e.g., 'Married', 'Single').                                       |
 | gender          | NVARCHAR(50) | The customer's gender (e.g., 'Male', 'Female', 'Unknown').                                           |
 | birthdate       | DATE         | The customer's date of birth, in YYYY-MM-DD format (e.g., 1971-10-06).                           |
