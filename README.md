@@ -34,26 +34,9 @@ The project follows a medallion architecture that separates raw data ingestion, 
 - **Git & GitHub**.
 
 ## 📂 Data Sources
-
-### 1. ERP — Enterprise Resource Planning
-
-Provides operational and sales-related information, potentially including:
-
-- Sales transactions and orders.
-- Product identifiers and attributes.
-- Sales quantities and prices.
-- Transaction dates and order details.
-
-### 2. CRM — Customer Relationship Management
-
-Provides customer-related information, potentially including:
-
-- Customer identifiers and names.
-- Customer attributes and demographics.
-- Geographic information.
-- Additional attributes required for sales analysis.
-
-The actual entities and columns depend on the supplied CSV datasets.
+The project uses CSV datasets organized into two main directories: CRM and ERP.
+- **CRM:** `datasets/crm_source/`
+- **ERP:** `datasets/erp_source/`
 
 ## 🔄 ETL Pipeline
 
