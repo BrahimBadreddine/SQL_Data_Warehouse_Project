@@ -18,6 +18,8 @@ The objective is to transform raw CSV files into clean, integrated, and business
 
 ## 🏗️ Data Architecture
 
+The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+
 ### Overall Architecture
 ![Data Architecture](docs/02_high_level_dwh_architecture.png)
 
