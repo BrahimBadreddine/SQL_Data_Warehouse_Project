@@ -21,7 +21,7 @@ The Gold Layer holds the business-level view of the data, designed for analytics
 | country         | NVARCHAR(50) | The customer's country of residence (e.g., 'Spain').                                         |
 | marital_status  | NVARCHAR(50) | The customer's marital status (e.g., 'Married', 'Single').                                       |
 | gender          | NVARCHAR(50) | The customer's gender (e.g., 'Male', 'Female', 'Unknown').                                           |
-| birthdate       | DATE         | The customer's date of birth, in YYYY-MM-DD format (e.g., 1971-10-06).                           |
+| birthdate       | DATE         | The customer's date of birth, in YYYY-MM-DD format (e.g., 2000-05-14).                           |
 | create_date     | DATE         | The date the customer record was created in the system.                                          |
 
 ---
