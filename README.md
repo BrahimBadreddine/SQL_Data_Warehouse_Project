@@ -21,7 +21,7 @@ The objective is to transform raw CSV files into clean, integrated, and analytic
 
 The project follows a layered architecture that separates raw data ingestion, transformation, and analytical reporting.
 
-
+![Screenshot](docs/01_detailed_dwh_layers.png)
 
 *Note: The layers describe the intended architecture and should reflect the actual implementation.*
 
