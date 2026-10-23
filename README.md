@@ -21,7 +21,7 @@ The objective is to transform raw CSV files into clean, integrated, and business
 
 The project follows a medallion architecture that separates raw data ingestion, transformation, and business-ready data.
 
-![Screenshot](docs/01_detailed_dwh_layers.png)
+![Data Architecture](docs/01_detailed_dwh_layers.png)
 
 *Note: The layers describe the intended architecture and should reflect the actual implementation.*
 
@@ -37,6 +37,18 @@ The project follows a medallion architecture that separates raw data ingestion, 
 The project uses CSV datasets organized into two main directories: CRM and ERP.
 - **CRM:** `datasets/crm_source/`
 - **ERP:** `datasets/erp_source/`
+
+## 🔄 Data Flow
+
+![Data Flow](docs/04_data_flow.png)
+
+## 🔗 Data Integration
+
+![Data Integration](docs/05_data_integration.png)
+
+## 🗃️ Data Model
+
+![Data Model](docs/06_data_model.png)
 
 ## 🔄 ETL Pipeline
 
