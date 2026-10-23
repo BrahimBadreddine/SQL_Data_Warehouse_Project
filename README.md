@@ -7,7 +7,7 @@
 
 This project demonstrates the design and implementation of a modern **SQL Server Data Warehouse** that integrates sales data from two operational source systems: **ERP (Enterprise Resource Planning)** and **CRM (Customer Relationship Management)**.
 
-The objective is to transform raw CSV files into clean, integrated, and analytics-ready data using SQL Server and T-SQL. The warehouse provides a reliable foundation for business intelligence, sales reporting, and data-driven decision-making.
+The objective is to transform raw CSV files into clean, integrated, and business-ready data using SQL Server and T-SQL. The warehouse provides a reliable foundation for business intelligence, sales reporting, and data-driven decision-making.
 
 ## 🎯 Project Objectives
 
