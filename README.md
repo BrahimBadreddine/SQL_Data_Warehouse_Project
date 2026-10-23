@@ -46,10 +46,6 @@ The project uses CSV datasets organized into two main directories: CRM and ERP.
 
 ![Data Integration](docs/05_data_integration.png)
 
-## 🗃️ Data Model
-
-![Data Model](docs/06_data_model.png)
-
 ## 🔄 ETL Pipeline
 
 ### 1. Extract
@@ -90,6 +86,8 @@ The warehouse uses **star schema** to make analytical queries easier to understa
 ### Fact Table
 
 - `fact_sales` — Sales measures and foreign keys linking transactions to dimensions.
+
+![Data Model](docs/06_data_model.png)
 
 ## 📁 Repository Structure
 
