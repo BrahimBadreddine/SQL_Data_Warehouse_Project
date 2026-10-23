@@ -1,4 +1,3 @@
-
 # 🚀 SQL Data Warehouse Project
 
 ### Building a Modern SQL Server Data Warehouse for Sales Analytics
